@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhoAmI"
+    android:background="#f8af8f">
+
+
+    <TextView
+        android:id="@+id/tv_i_am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am"
+        android:textStyle="italic"
+        android:layout_marginTop="100dp"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor"
+       android:elevation="12dp"
+        android:padding="15dp"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@id/button_patient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_i_am" />
+
+    <Button
+        android:id="@+id/button_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:padding="15dp"
+        android:text="Looking for Doctor"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_doctor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
