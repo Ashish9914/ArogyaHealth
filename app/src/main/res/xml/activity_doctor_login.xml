@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorLogin"
+    android:background="#F8AF8F">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10"/>
+
+    <!--<include
+        android:id="@+id/logo_layout"
+        layout="@layout/logo_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintBottom_toTopOf="@id/textView"/>-->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="Doctor Login Page"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2995896" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/tv_customer_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login ID"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/et_customer_id"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/et_customer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:textColorHint="#FFC1CECD"
+                android:hint="Customer ID"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_customer_ID" />
+            <TextView
+                android:id="@+id/tv_ipin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:text="Password"
+                app:layout_constraintStart_toStartOf="@id/et_password"
+                app:layout_constraintTop_toBottomOf="@id/et_customer_id" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:padding="5dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Password"
+                android:layout_marginTop="5dp"
+                android:textColorHint="#FFC1CECD"
+                android:textColor="@color/black"
+                android:minHeight="30dp"
+                android:inputType="textPassword"
+                app:layout_constraintStart_toStartOf="@id/et_customer_id"
+                app:layout_constraintTop_toBottomOf="@id/tv_ipin"
+                app:layout_constraintEnd_toEndOf="@id/et_customer_id"
+                />
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#2196F3"
+                android:text="Forgot password"
+                app:layout_constraintStart_toStartOf="@id/et_password"
+                app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+            <TextView
+                android:id="@+id/tv_password_is_case_sensitive"
+                android:textColor="#FFC1CECD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Password is case sensitive"
+                app:layout_constraintStart_toStartOf="@id/tv_forgot_password"
+                app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="#FF0000"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignIn"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:id="@+id/iv_appprotectt_securedd"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
